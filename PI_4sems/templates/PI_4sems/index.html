@@ -1,0 +1,54 @@
+{% extends 'PI_4sems/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Curso e Semestre</title>
+    <link rel="stylesheet" href="{% static 'index_style.css' %}">
+</head>
+<body>
+    <div class="background-image">
+        <div class="background-overlay"></div>
+    </div>
+    
+        <div class="container">
+            <form action="#" method="post">
+                <fieldset>
+                    <h1>Consulta de Curso e Semestre</h1>
+                    <div class="input-group">
+                        <label for="curso">Curso:</label>
+                        <select name="curso" id="curso">
+                            <option value="DSM">Desenvolvimento de Software Multiplataforma</option>
+                            <option value="GE">Gestão Empresarial</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="semestre">Semestre:</label>
+                        <select name="semestre" id="semestre">
+                            <option value="1">1º SEMESTRE</option>
+                            <option value="2">2º SEMESTRE</option>
+                            <option value="3">3º SEMESTRE</option>
+                            <option value="4">4º SEMESTRE</option>
+                            <option value="5">5º SEMESTRE</option>
+                            <option value="6">6º SEMESTRE</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="consultar-button">Consultar</button>
+                </fieldset>
+            </form>
+    </div>
+    <div class="logo"></div>
+</body>
+</html>
+
+
+
+
+ 
+{% endblock content %}
+
+
