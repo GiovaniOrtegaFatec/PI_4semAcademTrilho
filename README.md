@@ -22,7 +22,7 @@ O AcademTrilho visa oferecer uma experiência intuitiva de navegação pelo camp
 
 ## Logo
 
-![Mapa do Campus](PI_4sems\static\logo.png)
+![Logo](main/PI_4sems/static/logo.png)
 *Logo do projeto*
 
 ## Tecnologias Utilizadas
