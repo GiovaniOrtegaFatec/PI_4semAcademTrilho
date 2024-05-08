@@ -35,6 +35,6 @@ O AcademTrilho visa oferecer uma experiência intuitiva de navegação pelo camp
 
 ## Equipe
 
-- [Giovani Ortega]([link_perfil_github](https://github.com/GiovaniOrtegaFatec))
-- [Chiara Maneo]([link_perfil_github](https://github.com/ChiaraManeo))
-- [Carlos Armindo Degaspari]([link_perfil_github](https://github.com/CarlosDegasperi))
+- [Giovani Ortega](https://github.com/GiovaniOrtegaFatec)
+- [Chiara Maneo](https://github.com/ChiaraManeo)
+- [Carlos Armindo Degaspari](https://github.com/CarlosDegasperi)
