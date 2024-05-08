@@ -22,7 +22,7 @@ O AcademTrilho visa oferecer uma experiência intuitiva de navegação pelo camp
 
 ## Logo
 
-![Logo](logo.png)
+![Logo](logo.png) <br>
 *Logo do projeto*
 
 ## Tecnologias Utilizadas
