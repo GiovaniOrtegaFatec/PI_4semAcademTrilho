@@ -1,0 +1,43 @@
+{% extends 'PI_4sems/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Principal DSM</title>
+    <link rel="stylesheet" href="{% static 'telaDSM_style.css' %}">
+</head>
+<body>
+
+    <header>
+        <img src="/static/logo_preto.png" class="logo">
+        <h1>DESENVOLVIMENTO DE SOFTWARE MULTIPLATAFORMA</h1>
+    </header>
+
+    <div class="info-box">
+        <h2>Segunda-feira</h2>
+        <h2>Data: 25/03/2024</h2>
+        <h2>Horário: 19:30:25H</h2>
+        <p>Matéria: Estatística Aplicada</p>
+        <p>Professor: Fidelis</p>
+        <p>Sala: 5</p>
+        <div class="button-container">
+            <a href="grade_curricular.html" class="button">Grade Curricular</a>
+            <a href="mapa_faculdade.html" class="button">Como chegar?</a>
+        </div>
+    </div>
+
+    <div class="background-image">
+        <div class="background-overlay"></div>
+    </div>
+
+    <a href="\PI_4sems\index.html" class="back-button">Pesquisar novamente</a>
+    
+</body>
+</html>
+
+
+{% endblock content %}
