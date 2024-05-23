@@ -8,7 +8,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela Principal DSM</title>
-    <link rel="stylesheet" href="{% static 'telaDSM_style.css' %}">
+    <link rel="stylesheet" href="{% static 'telaprincipal_style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -25,7 +26,7 @@
         <p>Professor: Fidelis</p>
         <p>Sala: 5</p>
         <div class="button-container">
-            <a href="grade_curricular.html" class="button">Grade Curricular</a>
+            <a href="{% url 'grade_curricular' %}" class="button">Grade Curricular</a>
             <a href="mapa_faculdade.html" class="button">Como chegar?</a>
         </div>
     </div>
@@ -34,7 +35,7 @@
         <div class="background-overlay"></div>
     </div>
 
-    <a href="\PI_4sems\index.html" class="back-button">Pesquisar novamente</a>
+    <a href="{% url 'index' %}" class="back-button">Pesquisar novamente</a>
     
 </body>
 </html>

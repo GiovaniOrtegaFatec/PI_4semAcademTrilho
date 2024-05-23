@@ -1,0 +1,64 @@
+{% extends 'PI_4sems/base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Curricular</title>
+    <link rel="stylesheet" href="{% static 'grade_curricular.css' %}">
+</head>
+<body>
+    <div class="header">
+        <img src="/static/logo.png" class="logo">
+        <h1>GRADE CURRICULAR</h1>
+    </div>
+    <div class="container">
+        <div class="curriculum">
+            <div class="semester">
+                <h2>1º Semestre</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Curso</th>
+                            <th>Semestre</th>
+                            <th>Dia da Semana</th>
+                            <th>Horário</th>
+                            <th>Matéria</th>
+                            <th>Professor</th>
+                            <th>Sala</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for disciplina in grade_curricular %}
+                            <tr>
+                                <td>{{ disciplina.curso }}</td>
+                                <td>{{ disciplina.semestre }}</td>
+                                <td>{{ disciplina.dia_semana }}</td>
+                                <td>{{ disciplina.horario }}</td>
+                                <td>{{ disciplina.materia }}</td>
+                                <td>{{ disciplina.professor }}</td>
+                                <td>{{ disciplina.sala }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <div class="background-image">
+                <div class="background-overlay"></div>
+            </div>
+        </div>
+    </div>
+
+    <a href="{% url 'telaprincipal' %}" class="back-button">Voltar</a>
+
+</body>
+</html>
+
+
+
+
+ 
+{% endblock content %}

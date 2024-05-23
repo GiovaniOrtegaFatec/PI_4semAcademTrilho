@@ -3,5 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('telaprincipal/', views.telaprincipal_dsm, name='telaprincipal_dsm'),
+    path('telaprincipal/', views.telaprincipal, name='telaprincipal'),
+    path('gradecurricular/', views.grade_curricular, name='grade_curricular'),
 ]

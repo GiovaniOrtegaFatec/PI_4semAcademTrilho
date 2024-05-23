@@ -1,5 +1,5 @@
 * {
-    font-family: 'Abhaya Libre';
+    font-family: 'Abhaya';
     margin: 0%;
     padding: 0;
 }
@@ -99,7 +99,7 @@ fieldset h1 {
 
 .consultar-button {
     width: fit-content;
-    background: #FFE70F;
+    background:  rgb(255, 196, 0);
     border: none;
     border-radius: 14px;
     padding: 10px 20px;

@@ -4,5 +4,8 @@ def index(request):
     """Página principal do PI_4sem"""
     return  render(request, 'PI_4sems/index.html')
 
-def telaprincipal_dsm(request):
-    return render(request, 'PI_4sems/TelaPrincipal_DSM.html')
+def telaprincipal(request):
+    return render(request, 'PI_4sems/TelaPrincipal.html')
+
+def grade_curricular(request):
+    return render(request, 'PI_4sems/grade_curricular.html')

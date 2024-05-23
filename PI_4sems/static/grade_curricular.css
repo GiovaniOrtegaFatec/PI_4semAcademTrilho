@@ -1,0 +1,108 @@
+* {
+    font-family: 'Abhaya';
+    margin: 0%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #378EDB;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    position: absolute;
+    top: 50%; /* Alinha o topo do logo ao centro do header */
+    left: 10px; /* Define a distância da borda esquerda do header */
+    transform: translateY(-50%); /* Move o logo 50% para cima para centralizá-lo verticalmente */
+    max-height: 95%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden; /* Oculta a barra de rolagem horizontal */
+}
+
+.curriculum {
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.semester {
+    margin-bottom: 40px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #378EDB;
+    color: #fff;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+table tr:hover {
+    background-color: #ddd;
+}
+
+.back-button {
+    position: fixed;
+    font-weight: bold;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: rgb(255, 196, 0);
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+    text-decoration: none; /* Remove o sublinhado do link */
+    display: inline-block; /* Permite o padding ser aplicado ao link */
+}
+
+.back-button:hover {
+    background-color: rgb(63, 126, 63);
+    color: white;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url('/static/FATEC.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+.background-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+}
