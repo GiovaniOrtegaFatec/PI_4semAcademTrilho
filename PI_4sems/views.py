@@ -9,3 +9,6 @@ def telaprincipal(request):
 
 def grade_curricular(request):
     return render(request, 'PI_4sems/grade_curricular.html')
+
+def mapa(request):
+    return render(request, 'PI_4sems/mapa.html')

@@ -1,0 +1,26 @@
+{% extends 'PI_4sems/base.html' %}
+{% load static %}
+
+{% block content %}
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+    <link rel="stylesheet" href="{% static 'mapa.css' %}">
+</head>
+<body>
+    <div class="header">
+        <h1>COMO CHEGAR NO LABORATÓRIO 2</h1>
+    </div>
+    <div class="image-container">
+        <img src="{% static 'LAB2.jpg' %}" alt="Imagem">
+    </div>
+</body>
+</html>
+
+
+
+
+ 
+{% endblock content %}

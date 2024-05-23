@@ -1,0 +1,31 @@
+body, html {
+    font-family: 'Abhaya';
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.header {
+    background-color: #378EDB;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    position: relative;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.image-container {
+    margin-top: 60px; /* Adiciona um espaço entre o cabeçalho e a imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100% - 60px); /* Garante que a imagem ocupe todo o espaço restante */
+}
+
+.image-container img {
+    max-width: 90%; /* Reduz o tamanho da imagem */
+    max-height: 90%; /* Reduz o tamanho da imagem */
+    object-fit: contain; /* Mantém a proporção da imagem */
+}
