@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('caminho/para/Calibri.ttf') format('truetype');
+}
+
 * {
-    font-family: 'Abhaya';
+    font-family: 'Calibri', sans-serif !important;
     margin: 0;
     padding: 0;
 }
@@ -18,7 +23,7 @@ header {
     z-index: 1;
 }
 
-.logo{
+.logo {
     position: absolute;
     top: 0;
     left: 0;
@@ -28,25 +33,42 @@ header {
 .info-box {
     position: absolute;
     background-color: white;
-    width: 50%;
-    max-width: 600px;
+    width: 40vw;
+    height: 50vh;
     padding: 30px;
-    border-radius: 10px;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     text-align: center;
     z-index: 2;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
+.date-time-container {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    gap: 50px; /* Espaçamento entre os itens */
+    width: 100%; /* Garante que o container ocupe a largura total */
+    margin-bottom: 20px; /* Espaçamento inferior */
+}
+
+.date-time-item {
+    font-size: 20px;
+    color: #000;
+}
 
 .info-box h2 {
-    display: inline-block;
+    margin-top: 30px;
     font-size: 25px;
     color: #000000;
-    margin-right: 20px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .info-box p {
@@ -58,6 +80,7 @@ header {
 .button-container {
     display: flex;
     justify-content: space-around;
+    width: 100%; /* Certifica-se de que os botões estão espaçados corretamente */
     margin-top: 20px;
 }
 

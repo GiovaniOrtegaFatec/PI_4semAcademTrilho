@@ -18,15 +18,17 @@
     </header>
 
     <div class="info-box">
-        <h2>Segunda-feira</h2>
-        <h2>Data: 25/03/2024</h2>
-        <h2>Horário: 19:30:25H</h2>
-        <p>Matéria: Estatística Aplicada</p>
-        <p>Professor: Fidelis</p>
-        <p>Sala: 5</p>
+        <div class="date-time-container">
+            <div class="date-time-item">Segunda-feira</div>
+            <div class="date-time-item">25/03/2024</div>
+            <div class="date-time-item">19:30:25</div>
+        </div>
+        <h2>Matéria: Estatística Aplicada</h2>
+        <h2>Professor: Fidelis</h2>
+        <h2>Sala: 5</h2>
         <div class="button-container">
             <a href="{% url 'grade_curricular' %}" class="button">Grade Curricular</a>
-            <a href="mapa_faculdade.html" class="button">Como chegar?</a>
+            <a href="{% url 'mapa' %}" class="button">Como chegar?</a>
         </div>
     </div>
 
