@@ -14,21 +14,35 @@
 
     <header>
         <img src="/static/logo_preto.png" class="logo">
-        <h1>DESENVOLVIMENTO DE SOFTWARE MULTIPLATAFORMA</h1>
+        <h1>{{curso}}</h1>
     </header>
 
     <div class="info-box">
         <div class="date-time-container">
-            <div class="date-time-item">Segunda-feira</div>
-            <div class="date-time-item">25/03/2024</div>
-            <div class="date-time-item">19:30:25</div>
+            <div class="date-time-item"> {{ dia }}</div>
+            <div class="date-time-item"> {{ data }}</div>
+            <div class="date-time-item"> </div>
         </div>
-        <h2>Matéria: Estatística Aplicada</h2>
-        <h2>Professor: Fidelis</h2>
-        <h2>Sala: 5</h2>
+        
+        <h2>Matéria: {{tasks_curso.materia}} </h2>
+        <h2>Professor: {{tasks_curso.professor}} </h2>
+        <h2>Sala: {{tasks_curso.sala}}</h2>
         <div class="button-container">
-            <a href="{% url 'grade_curricular' %}" class="button">Grade Curricular</a>
-            <a href="{% url 'mapa' %}" class="button">Como chegar?</a>
+            <form action="{% url 'grade_curricular' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="curso" value="{{ tasks_curso.curso }}">
+                <input type="hidden" name="semestre" value="{{ tasks_curso.semestre }}">
+                <button type="submit" class="button">Grade Curricular</button>
+                
+            </form>
+            <form action="{% url 'mapa' %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="curso" value="{{ tasks_curso.curso }}">
+                <input type="hidden" name="semestre" value="{{ tasks_curso.semestre }}">
+                
+                <button type="submit" class="button">Como chegar?</button>
+            </form>
+            
         </div>
     </div>
 

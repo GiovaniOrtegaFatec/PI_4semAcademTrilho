@@ -18,9 +18,8 @@
     <div class="container">
         <div class="curriculum">
             <div class="semester">
-                <h2>1º Semestre</h2>
                 <table>
-                    <thead>
+                   
                         <tr>
                             <th>Curso</th>
                             <th>Semestre</th>
@@ -30,20 +29,19 @@
                             <th>Professor</th>
                             <th>Sala</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                        {% for disciplina in grade_curricular %}
+                    
+                        {% for task in tasks %}
                             <tr>
-                                <td>{{ disciplina.curso }}</td>
-                                <td>{{ disciplina.semestre }}</td>
-                                <td>{{ disciplina.dia_semana }}</td>
-                                <td>{{ disciplina.horario }}</td>
-                                <td>{{ disciplina.materia }}</td>
-                                <td>{{ disciplina.professor }}</td>
-                                <td>{{ disciplina.sala }}</td>
+                                <td>{{ task.curso }}</td>
+                                <td>{{ task.semestre }}</td>
+                                <td>{{ task.diasemana }}</td>
+                                <td>{{ task.horario }}</td>
+                                <td>{{ task.materia }}</td>
+                                <td>{{ task.professor }}</td>
+                                <td>{{ task.sala }}</td>
                             </tr>
                         {% endfor %}
-                    </tbody>
+                   
                 </table>
             </div>
             <div class="background-image">
@@ -52,7 +50,7 @@
         </div>
     </div>
 
-    <a href="{% url 'telaprincipal' %}" class="back-button">Voltar</a>
+    <a href="{% url 'index' %}" class="back-button">Voltar</a>
 
 </body>
 </html>
