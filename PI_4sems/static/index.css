@@ -10,10 +10,11 @@
 }
 
 .logo {
+    margin-right: auto;
     background: url('/static/logo_branco.png') no-repeat;
     background-size: contain;
-    width: 15%; /* Largura da imagem do logo */
-    height: 300px; /* Altura da imagem do logo */
+    width: 20%; /* Largura da imagem do logo */
+    height: 200px; /* Altura da imagem do logo */
     position: absolute;
     top: 20px; /* Distância do topo da página */
     left: 20px; /* Distância da borda esquerda da página */

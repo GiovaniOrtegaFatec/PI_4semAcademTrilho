@@ -14,14 +14,14 @@
 
     <header>
         <img src="/static/logo_preto.png" class="logo">
-        <h1>{{curso}}</h1>
+        <h1>{{tasks_curso.materia}}</h1>
     </header>
 
     <div class="info-box">
         <div class="date-time-container">
             <div class="date-time-item"> {{ dia }}</div>
             <div class="date-time-item"> {{ data }}</div>
-            <div class="date-time-item"> </div>
+            <div class="date-time-item"> {{ hora }} </div>
         </div>
         
         <h2>Matéria: {{tasks_curso.materia}} </h2>

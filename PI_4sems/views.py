@@ -29,7 +29,9 @@ def telaprincipal(request):
             return render(request, 'PI_4sems/TelaPrincipal.html', {'tasks_curso': tasks_curso, 'data': data_formatada, 'dia': dia_da_semana})
         else:
             return HttpResponse('Nenhuma tarefa encontrada para os critérios fornecidos.')
-        
+    elif request.method == 'GET':
+        # Processamento para requisição GET, se necessário.
+        return render(request, 'PI_4sems/TelaPrincipal.html')
     else:
         return HttpResponse('Método não permitido')
 

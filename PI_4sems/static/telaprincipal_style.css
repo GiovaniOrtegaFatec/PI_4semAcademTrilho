@@ -18,7 +18,7 @@ header {
     justify-content: center;
     align-items: center;
     background-color: rgb(255, 196, 0);
-    padding: 25px;
+    padding: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
     z-index: 1;
 }
@@ -27,7 +27,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100px; 
+    margin-right: auto;
+    max-height: 100%;
 }
 
 .info-box {
@@ -53,9 +54,10 @@ header {
 .date-time-container {
     display: flex;
     justify-content: center; /* Alinha horizontalmente */
-    gap: 50px; /* Espaçamento entre os itens */
+    gap: 10px;
     width: 100%; /* Garante que o container ocupe a largura total */
     margin-bottom: 20px; /* Espaçamento inferior */
+    flex-grow: 1;
 }
 
 .date-time-item {
