@@ -10,7 +10,8 @@
     <title>Consulta de Curso e Semestre</title>
     <link rel="stylesheet" href="{% static 'index.css' %}">
     <script>
-        // Função para configurar cookies
+        // Scripts para COOKIES
+        // Função para configurar cookies (name, value, days)
         function setCookie(name, value, days) {
             var expires = "";
             if (days) {
@@ -34,11 +35,13 @@
         }
 
         // Função para manipular o envio do formulário
+        // Os cookies podem ser definidos por tempo pela variavel days
         function handleFormSubmit(event) {
             event.preventDefault();
             var curso = document.getElementById('curso').value;
             var semestre = document.getElementById('semestre').value;
-            setCookie('curso', curso, 7); // Cookie com validade de 7 dias
+            // Os cookies foram definidos com validade de 7 dias nas duas linhas abaixo
+            setCookie('curso', curso, 7);
             setCookie('semestre', semestre, 7);
             event.target.submit();
         }

@@ -3,18 +3,22 @@ from django.http import HttpResponse
 from datetime import datetime
 from PI_4sems.models import Task
 
-data_atual = datetime.now()
-dia_da_semana_numero = data_atual.weekday()
-dias_da_semana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"]
-dias_da_semana1 = ["SEG", "TER", "QUA", "QUI", "SEX", "SAB", "DOM"]
-dia_da_semana = dias_da_semana[dia_da_semana_numero]
-dia_da_semana1 = dias_da_semana1[dia_da_semana_numero]
-data_formatada = data_atual.strftime("%d/%m/%Y %H:%M:%S")
+def DATA_INFO():
+    data_atual = datetime.now()
+    dia_da_semana_numero = data_atual.weekday()
+    dias_da_semana = ["Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado", "Domingo"]
+    dias_da_semana1 = ["SEG", "TER", "QUA", "QUI", "SEX", "SAB", "DOM"]
+    dia_da_semana = dias_da_semana[dia_da_semana_numero]
+    dia_da_semana1 = dias_da_semana1[dia_da_semana_numero]
+    data_formatada = data_atual.strftime("%d/%m/%Y %H:%M:%S")
+    return data_formatada, dia_da_semana, dia_da_semana1
 
 def index(request):
     return render(request, 'PI_4sems/index.html')
 
 def telaprincipal(request):
+    data_formatada, dia_da_semana, dia_da_semana1 = DATA_INFO()
+    
     if request.method == 'POST':
         curso = request.POST.get('curso')
         semestre = request.POST.get('semestre')
@@ -27,7 +31,7 @@ def telaprincipal(request):
         print("DIA DA SEMANA:", dia_da_semana1)
         # Processamento...
         if not curso or not semestre:
-           return HttpResponse('Curso e semestre não definidos.')        
+            return HttpResponse('Curso e semestre não definidos.')        
         tasks_curso = Task.objects.filter(curso=curso, semestre=semestre, diasemana=dia_da_semana1).first()
         if tasks_curso:
             request.session['materia'] = tasks_curso.materia
@@ -69,6 +73,8 @@ def telaprincipal(request):
         return HttpResponse('Método não permitido')
 
 def grade_curricular(request):
+    data_formatada, dia_da_semana, dia_da_semana1 = DATA_INFO()
+
     curso = request.session.get('curso')
     semestre = request.session.get('semestre')
     materia = request.session.get('materia')
@@ -92,6 +98,8 @@ def grade_curricular(request):
     })
 
 def mapa(request):
+    data_formatada, dia_da_semana, dia_da_semana1 = DATA_INFO()
+
     curso = request.session.get('curso')
     semestre = request.session.get('semestre')
     materia = request.session.get('materia')
