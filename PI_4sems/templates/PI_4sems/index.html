@@ -9,47 +9,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Consulta de Curso e Semestre</title>
     <link rel="stylesheet" href="{% static 'index.css' %}">
+    <script>
+        // Função para configurar cookies
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Função para obter cookies por nome
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        // Função para manipular o envio do formulário
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            var curso = document.getElementById('curso').value;
+            var semestre = document.getElementById('semestre').value;
+            setCookie('curso', curso, 7); // Cookie com validade de 7 dias
+            setCookie('semestre', semestre, 7);
+            event.target.submit();
+        }
+
+        // Função para preencher curso e semestre a partir dos cookies, se disponíveis
+        function fillFormFromCookies() {
+            var cursoCookie = getCookie('curso');
+            var semestreCookie = getCookie('semestre');
+            if (cursoCookie && semestreCookie) {
+                document.getElementById('curso').value = cursoCookie;
+                document.getElementById('semestre').value = semestreCookie;
+            }
+        }
+
+        // Executar a função ao carregar a página para preencher o formulário
+        document.addEventListener('DOMContentLoaded', function() {
+            fillFormFromCookies();
+        });
+    </script>
 </head>
 <body>
     <div class="background-image">
         <div class="background-overlay"></div>
     </div>
     
-        <div class="container">
-            <form action="{% url 'telaprincipal' %}" method="post">
-                {% csrf_token %}
-                <fieldset>
-                    <h1>Consulta de Curso e Semestre</h1>
-                    <div class="input-group">
-                        <label for="curso">Curso:</label>
-                        <select name="curso" id="curso">
-                            <option value="DSM">Desenvolvimento de Software Multiplataforma</option>
-                            <option value="GE">Gestão Empresarial</option>
-                        </select>
-                    </div>
-                    <div class="input-group">
-                        <label for="semestre">Semestre:</label>
-                        <select name="semestre" id="semestre">
-                            <option value="1">1º SEMESTRE</option>
-                            <option value="2">2º SEMESTRE</option>
-                            <option value="3">3º SEMESTRE</option>
-                            <option value="4">4º SEMESTRE</option>
-                            <option value="5">5º SEMESTRE</option>
-                            <option value="6">6º SEMESTRE</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="consultar-button">Consultar</button>
-                </fieldset>
-            </form>
+    <div class="container">
+        <form action="{% url 'telaprincipal' %}" method="post" onsubmit="handleFormSubmit(event)">
+            {% csrf_token %}
+            <fieldset>
+                <h1>Consulta de Curso e Semestre</h1>
+                <div class="input-group">
+                    <label for="curso">Curso:</label>
+                    <select name="curso" id="curso">
+                        <option value="DSM">Desenvolvimento de Software Multiplataforma</option>
+                        <option value="GE">Gestão Empresarial</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="semestre">Semestre:</label>
+                    <select name="semestre" id="semestre">
+                        <option value="1">1º SEMESTRE</option>
+                        <option value="2">2º SEMESTRE</option>
+                        <option value="3">3º SEMESTRE</option>
+                        <option value="4">4º SEMESTRE</option>
+                        <option value="5">5º SEMESTRE</option>
+                        <option value="6">6º SEMESTRE</option>
+                    </select>
+                </div>
+                <button type="submit" class="consultar-button">Consultar</button>
+            </fieldset>
+        </form>
     </div>
     <div class="logo"></div>
 </body>
 </html>
-
-
-
-
- 
 {% endblock content %}
-
-
