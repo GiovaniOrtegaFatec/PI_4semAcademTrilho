@@ -14,7 +14,7 @@
 
     <header>
         <img src="/static/logo_preto.png" class="logo">
-        <h1>{{tasks_curso.materia}}</h1>
+        <h1>{{materia}}</h1>
     </header>
 
     <div class="info-box">
@@ -24,9 +24,9 @@
             <div class="date-time-item"> {{ hora }} </div>
         </div>
         
-        <h2>Matéria: {{tasks_curso.materia}} </h2>
-        <h2>Professor: {{tasks_curso.professor}} </h2>
-        <h2>Sala: {{tasks_curso.sala}}</h2>
+        <h2>Matéria: {{materia}} </h2>
+        <h2>Professor: {{professor}} </h2>
+        <h2>Sala: {{sala}}</h2>
         <div class="button-container">
             <form action="{% url 'grade_curricular' %}" method="post">
                 {% csrf_token %}
