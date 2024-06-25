@@ -19,7 +19,7 @@ header {
     align-items: center;
     background-color: rgb(255, 196, 0);
     padding: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
@@ -31,14 +31,13 @@ header {
     max-height: 100%;
 }
 
-.info-box {
+.info-box, .info-sala {
     position: absolute;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     width: 40vw;
     height: 50vh;
     padding: 30px;
     border-radius: 0px;
-    background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 1);
     text-align: center;
     z-index: 2;
@@ -52,30 +51,15 @@ header {
 }
 
 .info-sala {
-    position: absolute;
-    background-color: white;
-    width: 40vw;
-    height: 50vh;
-    padding: 30px;
-    border-radius: 0px;
-    background-color: rgba(255, 255, 255, 0.7);
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-    text-align: center;
-    z-index: 2;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
+
 .date-time-container {
     display: flex;
-    justify-content: center; /* Alinha horizontalmente */
+    justify-content: center;
     gap: 10px;
-    width: 100%; /* Garante que o container ocupe a largura total */
-    margin-bottom: 20px; /* Espaçamento inferior */
+    width: 100%;
+    margin-bottom: 20px;
     flex-grow: 1;
 }
 
@@ -92,6 +76,11 @@ header {
     font-weight: bold;
 }
 
+.info-box h2 span {
+    font-weight: normal; /* Remove o negrito */
+    font-size: inherit; /* Mantém o tamanho da fonte igual ao do h2 */
+}
+
 .info-box p {
     font-size: 20px;
     color: #333;
@@ -101,7 +90,7 @@ header {
 .button-container {
     display: flex;
     justify-content: space-around;
-    width: 100%; /* Certifica-se de que os botões estão espaçados corretamente */
+    width: 100%;
     margin-top: 20px;
 }
 
@@ -134,8 +123,8 @@ header {
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.5s ease;
-    text-decoration: none; /* Remove o sublinhado do link */
-    display: inline-block; /* Permite o padding ser aplicado ao link */
+    text-decoration: none;
+    display: inline-block;
 }
 
 .back-button:hover {
@@ -157,5 +146,110 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); 
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Media Queries para responsividade */
+@media (max-width: 1024px) {
+    .info-box, .info-sala {
+        width: 60vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    .info-box h2 {
+        font-size: 22px;
+    }
+
+    .info-box p, .date-time-item {
+        font-size: 18px;
+    }
+
+    .info-box .button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+
+    .back-button {
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .info-box, .info-sala {
+        width: 80vw;
+        height: auto;
+        padding: 15px;
+    }
+
+    .info-box h2 {
+        font-size: 20px;
+    }
+
+    .info-box p, .date-time-item {
+        font-size: 16px;
+    }
+
+    .info-box .button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+
+    .back-button {
+        font-size: 16px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-box, .info-sala {
+        width: 90vw;
+        height: auto;
+        padding: 10px;
+    }
+
+    .info-box h2 {
+        font-size: 18px;
+    }
+
+    .info-box p, .date-time-item {
+        font-size: 14px;
+    }
+
+    .info-box .button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+}
+
+@media (max-width: 320px) {
+    .info-box, .info-sala {
+        width: 100vw;
+        height: auto;
+        padding: 5px;
+    }
+
+    .info-box h2 {
+        font-size: 16px;
+    }
+
+    .info-box p, .date-time-item {
+        font-size: 12px;
+    }
+
+    .info-box .button {
+        font-size: 12px;
+        padding: 2px 4px;
+    }
+
+    .back-button {
+        font-size: 12px;
+        padding: 2px 4px;
+    }
 }

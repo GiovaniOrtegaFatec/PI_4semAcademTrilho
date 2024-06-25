@@ -24,9 +24,9 @@
             <div class="date-time-item"> {{ hora }} </div>
         </div>
         
-        <h2>Matéria: {{materia}} </h2>
-        <h2>Professor: {{professor}} </h2>
-        <h2>Sala: {{sala}}</h2>
+        <h2>Matéria: <span>{{materia}}</span></h2>
+        <h2>Professor: <span>{{professor}}</span></h2>
+        <h2>Sala: <span>{{sala}}</span></h2>
         <div class="button-container">
             <form action="{% url 'grade_curricular' %}" method="post">
                 {% csrf_token %}
