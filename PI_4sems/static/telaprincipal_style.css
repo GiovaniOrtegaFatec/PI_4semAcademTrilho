@@ -1,3 +1,4 @@
+/* CSS geral para toda a página */
 @font-face {
     font-family: 'Calibri';
     src: url('caminho/para/Calibri.ttf') format('truetype');
@@ -7,6 +8,7 @@
     font-family: 'Calibri', sans-serif !important;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -29,6 +31,7 @@ header {
     left: 0;
     margin-right: auto;
     max-height: 100%;
+    display: block;
 }
 
 .info-box, .info-sala {
@@ -174,6 +177,10 @@ header {
         font-size: 18px;
         padding: 8px 16px;
     }
+
+    header {
+        font-size: 22px; /* Reduz o tamanho do texto do header para telas menores */
+    }
 }
 
 @media (max-width: 768px) {
@@ -199,6 +206,31 @@ header {
     .back-button {
         font-size: 16px;
         padding: 6px 12px;
+    }
+
+    header {
+        font-size: 20px; /* Reduz o tamanho do texto do header para telas menores */
+    }
+}
+
+@media (max-width: 830px) {
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: auto;
+        max-height: 100%;
+        display: block;
+    }
+}
+
+@media (max-width: 580px) {
+    .logo {
+        display: none; /* Oculta o logo para telas menores que 580px */
+    }
+
+    header {
+        font-size: 18px; /* Reduz o tamanho do texto do header para telas muito pequenas */
     }
 }
 
@@ -226,6 +258,10 @@ header {
         font-size: 14px;
         padding: 4px 8px;
     }
+
+    header {
+        font-size: 16px; /* Ajusta o tamanho do texto do header para telas muito pequenas */
+    }
 }
 
 @media (max-width: 320px) {
@@ -252,4 +288,58 @@ header {
         font-size: 12px;
         padding: 2px 4px;
     }
+
+    header {
+        font-size: 14px; /* Ajusta o tamanho do texto do header para telas muito pequenas */
+    }
 }
+
+@media (min-width: 1280px) and (max-width: 1280px) {
+    .info-box {
+        width: 60vw; /* Ajusta a largura para ocupar 60% da largura da viewport */
+        max-width: 800px; /* Define uma largura máxima para a caixa de informações */
+        padding: 20px; /* Ajusta o espaçamento interno */
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center; /* Centraliza os botões horizontalmente */
+        flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+    }
+
+    .info-box .button {
+        margin: 10px; /* Adiciona um espaço entre os botões */
+    }
+}
+
+
+@media (max-width: 830px) {
+    .logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-right: auto;
+        max-height: 100%;
+        display: block;
+    }
+
+    header {
+        padding-left: 100px; /* Ajusta o padding do header para dar espaço ao logo */
+    }
+}
+
+@media (max-width: 580px) {
+    .logo {
+        display: none; /* Oculta o logo para telas menores que 580px */
+    }
+
+    header {
+        font-size: 18px; /* Reduz o tamanho do texto do header para telas menores */
+        padding-left: 10px; /* Ajusta o padding do header para telas menores */
+    }
+}
+
+
+
+
+

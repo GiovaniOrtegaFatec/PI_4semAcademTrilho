@@ -10,13 +10,13 @@
 }
 
 .info-sala {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    display: inline-flex;
     top: 0;
     width: 100%;
     text-align: center;
-    justify-content: center;
-    align-items: center;
     background-color: rgb(255, 196, 0);
     padding: 10px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
@@ -25,13 +25,13 @@
     font-size: large;
 }
 
-.logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-right: auto;
-    max-height: 100%;
+.info-sala .logo {
+    max-height: 100px; /* Altura máxima do logo, ajuste conforme necessário */
+    margin-right: 10px; /* Espaçamento à direita do logo, se desejado */
 }
+
+
+
 
 .image-container {
     margin-top: 60px; /* Adiciona um espaço entre o cabeçalho e a imagem */

@@ -31,7 +31,7 @@
 }
 
 .container {
-    margin-top: 70px; /* Ajusta o espaçamento do conteúdo abaixo do header */
+    margin-top: 10px; /* Ajusta o espaçamento do conteúdo abaixo do header */
     padding: 20px; /* Adiciona um espaçamento interno ao container */
     width: 90%; /* Largura do container */
     max-width: 1200px; /* Largura máxima do container para limitar em telas maiores */
@@ -46,6 +46,7 @@
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: auto; /* Permite a rolagem horizontal da tabela dentro do container */
 }
 
 .semester {
@@ -53,8 +54,10 @@
 }
 
 table {
-    width: 100%;
+    width: auto; /* Ajusta a largura da tabela conforme o conteúdo */
+    min-width: 100%; /* Define uma largura mínima para garantir que a tabela não fique muito estreita */
     border-collapse: collapse;
+    white-space: nowrap; /* Impede que o texto da tabela seja quebrado em várias linhas */
 }
 
 table th, table td {
@@ -120,3 +123,16 @@ table tr:hover {
 body {
     overflow-x: auto; /* Permite a rolagem horizontal da página inteira */
 }
+
+/* Media Query para telas com largura máxima de 420px */
+@media (max-width: 420px) {
+    .logo {
+        display: none; /* Esconde o logo para telas menores que 420px */
+    }
+
+    .header {
+        padding: 5px; /* Reduz o padding do header */
+    }
+}
+
+
