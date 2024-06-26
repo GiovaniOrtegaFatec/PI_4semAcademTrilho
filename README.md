@@ -38,3 +38,7 @@ O AcademTrilho visa oferecer uma experiência intuitiva de navegação pelo camp
 - [Giovani Ortega](https://github.com/GiovaniOrtegaFatec)
 - [Chiara Maneo](https://github.com/ChiaraManeo)
 - [Carlos Armindo Degaspari](https://github.com/CarlosDegasperi)
+
+## Link do nosso site
+
+- [AcademTrilho](https://academtrilho.pythonanywhere.com/)
